@@ -75,5 +75,47 @@ namespace Biblioteca.Controllers
             }
             return RedirectToAction("Index");
         }
+       [HttpGet]
+       public IActionResult EditAuthor(long id)
+        {
+            AuthorViewModel model = new AuthorViewModel();
+            Author author = _repoAuthor.GetById(id);
+            try
+            {
+                if (author!=null)
+                {
+                    model.FisrtName = author.FirstName;
+                    model.LastName = author.LastName;
+                    model.Email = author.Email;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error"+ex.Message);
+            }
+            return PartialView("EditAuthor",model);
+        }
+        [HttpPost]
+        public ActionResult EditAuthor(long id,AuthorViewModel model)
+        {
+            Author author = _repoAuthor.GetById(id);
+            try
+            {
+                if (author != null)
+                {
+                    author.FirstName = model.FisrtName;
+                    author.LastName = model.LastName;
+                    author.Email = model.Email;
+                    author.IpAddress= Request.HttpContext.Connection.RemoteIpAddress.ToString();
+                    author.ModifiedDate = DateTime.UtcNow;
+                    _repoAuthor.Update(author);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error" + ex.Message);
+            }
+            return RedirectToAction("Index");
+        }
     }
 }

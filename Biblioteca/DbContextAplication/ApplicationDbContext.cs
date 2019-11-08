@@ -23,5 +23,6 @@ namespace Biblioteca.DbContextAplication
         }
         public DbSet<Biblioteca.ViewModel.AuthorListingViewModel> AuthorListingViewModel { get; set; }
         public DbSet<Biblioteca.ViewModel.AuthorBookViewModel> AuthorViewModel { get; set; }
+        public DbSet<Biblioteca.ViewModel.AuthorViewModel> AuthorViewModel_1 { get; set; }
     }
 }

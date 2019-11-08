@@ -32,3 +32,4 @@ c:\users\luis d martinez\source\repos\Biblioteca\Biblioteca\obj\Debug\netcoreapp
 c:\users\luis d martinez\source\repos\Biblioteca\Biblioteca\obj\Debug\netcoreapp2.1\Biblioteca.csproj.CopyComplete
 c:\users\luis d martinez\source\repos\Biblioteca\Biblioteca\obj\Debug\netcoreapp2.1\Razor\Views\Author\Index.g.cshtml.cs
 c:\users\luis d martinez\source\repos\Biblioteca\Biblioteca\obj\Debug\netcoreapp2.1\Razor\Views\Author\AddAuthor.g.cshtml.cs
+C:\Users\Luis D Martinez\source\repos\Biblioteca\Biblioteca\obj\Debug\netcoreapp2.1\Razor\Views\Author\EditAuthor.g.cshtml.cs
